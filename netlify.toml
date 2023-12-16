@@ -1,18 +1,3 @@
 [build]
   publish = "_site"
   command = "bundle exec jekyll build"
-
-[[plugins]]
-  package = "@netlify/plugin-ruby"
-
-[context.production.environment]
-  JEKYLL_ENV = "production"
-
-[context.split1]
-  command = "bundle exec jekyll build --config _config.yml,_config.split1.yml"
-
-[context.deploy-preview]
-  command = "bundle exec jekyll build --config _config.yml,_config.preview.yml"
-
-[context.branch-deploy]
-  command = "bundle exec jekyll build --config _config.yml,_config.branch-deploy.yml"
